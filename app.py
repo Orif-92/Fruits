@@ -12,7 +12,7 @@ st.title('Olma, Lemon, Mango mevalarini klassifikasiya qiluvchi model')
 
 # rasmni joylash
 file = st.file_uploader('Rasm yuklash', type=['png', 'jpeg', 'gif', 'svg'])
-
+if file:
     st.image(file)
 
     # PIL convert
