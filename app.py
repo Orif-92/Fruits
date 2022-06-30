@@ -1,8 +1,11 @@
 import streamlit as st
 from fastai.vision.all import *
 import pathlib
-temp = pathlib.PosixPath
-pathlib.PosixPath = pathlib.WindowsPath
+import plotly.express as px
+import platform
+
+plt = platform.system()
+if plt == 'Linux': pathlib.WindowsPath = pathlib.PosixPath
 
 # title
 st.title('Olma, Lemon, Mango mevalarini klassifikasiya qiluvchi model')
