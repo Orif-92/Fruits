@@ -14,7 +14,7 @@ st.title('Olma, Lemon, Mango mevalarini klassifikasiya qiluvchi model')
 
 # rasmni joylash
 file = st.file_uploader('Rasm yuklash', type=['png', 'jpeg', 'gif', 'svg'])
-if file:
+
     st.image(file)
 
     # PIL convert
@@ -29,5 +29,5 @@ if file:
     st.info(f'Ehtimollik: {probs[pred_id]*100:.1f}%')
 
     # plotting
-   fig=px.bar(x=probs*100, y=model.dls.vocab)
+   fig=px.bar(x=probs*100, y=model.vocab)
    st.plotly_chart(fig)
